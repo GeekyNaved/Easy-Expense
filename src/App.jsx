@@ -1,9 +1,13 @@
-import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+import MainRouter from './pages/router'
 
 function App() {
+
   return (
-    <div>
-      <h1 className='text-center text-4xl text-violet-600'>Easy Expense</h1>
+    <div className="bg-slate-100 min-h-screen">
+      <BrowserRouter>
+        <MainRouter />
+      </BrowserRouter>
     </div>
   )
 }
