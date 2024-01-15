@@ -25,16 +25,20 @@ const SignUp = () => {
                 <InputField type="text" placeholder="Name" handleToggle={null} />
                 <InputField type="email" placeholder="Email" handleToggle={null} />
                 <InputField type={showPassword ? "text" : "password"} placeholder="Password" handleToggle={() => setShowPassword(!showPassword)} />
-                <CustButton className="mt-4 mx-10" title="SignUp" handleClick={() => alert('login')} />
-                <a href="#" className="text-center text-sm font-bold text-blue-600 hover:underline underline-offset-4">
-                    Forget Password ?
-                </a>
+                <CustButton className="mt-4 mx-10" title="Sign Up" handleClick={() => alert('login')} />
+                <p className="text-center">By continuing, you agreeing to our {" "}
+                    <a onClick={() => navigate("/terms-of-service")} className="text-sm font-bold underline underline-offset-4">
+                        Terms of Service
+                    </a> and  <a onClick={() => navigate("/privacy-policy")} className="text-sm font-bold underline underline-offset-4">
+                        Privacy Policy
+                    </a>
+                </p>
                 <p className="text-center text-gray-500">Already have an account?{" "}
-                    <a onClick={() => navigate('/login')} className="text-center text-sm text-blue-600 font-bold underline underline-offset-4">
+                    <a onClick={() => navigate('/login')} className="cursor-pointer text-center text-sm text-blue-600 font-bold underline underline-offset-4">
                         Login</a>
                 </p>
             </div>
-        </div>
+        </div >
     )
 }
 

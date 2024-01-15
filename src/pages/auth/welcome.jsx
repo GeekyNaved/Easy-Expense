@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 const Welcome = () => {
     const navigate = useNavigate();
     return (
-        <div className="bg-violet-500 flex flex-col items-center justify-center min-h-screen">
+        <div className="bg-blue-700 flex flex-col items-center justify-center min-h-screen">
             <p className="py-5 text-5xl text-white">
                 Easy Expense
             </p>

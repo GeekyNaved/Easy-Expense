@@ -24,12 +24,12 @@ const Login = () => {
             <div className="flex flex-col gap-6 item-center justify-center my-2">
                 <InputField type="email" placeholder="Email" handleToggle={null} />
                 <InputField type={showPassword ? "text" : "password"} placeholder="Password" handleToggle={() => setShowPassword(!showPassword)} />
-                <CustButton className="mt-4 mx-10" title="Login" handleClick={() => alert('login')} />
-                <a href="#" className="text-center text-sm font-bold text-blue-600 hover:underline underline-offset-4">
-                    Forget Password ?
+                <CustButton className="mt-4 mx-10" title="Login" handleClick={() => navigate("/home")} />
+                <a onClick={() => navigate("/forgot-password")} className="cursor-pointer self-center text-sm font-bold text-blue-600 hover:underline underline-offset-4">
+                    Forgot Password ?
                 </a>
                 <p className="text-center text-gray-500">Don't have an account yet?{" "}
-                    <a onClick={() => navigate('/signup')} className="text-center text-sm text-blue-600 font-bold underline underline-offset-4">
+                    <a onClick={() => navigate('/signup')} className="cursor-pointer text-center text-sm text-blue-600 font-bold underline underline-offset-4">
                         Sign Up</a>
                 </p>
             </div>
