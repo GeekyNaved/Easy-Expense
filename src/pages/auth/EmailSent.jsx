@@ -1,7 +1,4 @@
-import { useState } from "react"
-import InputField from "../../components/InputField"
 import CustButton from "../../components/CustButton";
-import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import emailRecovery from "../../assets/emailRecovery.png"
 const EmailSent = () => {

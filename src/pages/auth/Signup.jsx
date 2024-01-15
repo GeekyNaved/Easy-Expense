@@ -27,9 +27,9 @@ const SignUp = () => {
                 <InputField type={showPassword ? "text" : "password"} placeholder="Password" handleToggle={() => setShowPassword(!showPassword)} />
                 <CustButton className="mt-4 mx-10" title="Sign Up" handleClick={() => alert('login')} />
                 <p className="text-center">By continuing, you agreeing to our {" "}
-                    <a onClick={() => navigate("/terms-of-service")} className="text-sm font-bold underline underline-offset-4">
+                    <a onClick={() => navigate("/terms-of-service")} className="cursor-pointer text-sm font-bold underline underline-offset-4 hover:text-blue-600">
                         Terms of Service
-                    </a> and  <a onClick={() => navigate("/privacy-policy")} className="text-sm font-bold underline underline-offset-4">
+                    </a> and  <a onClick={() => navigate("/privacy-policy")} className="cursor-pointer text-sm font-bold underline underline-offset-4 hover:text-blue-600">
                         Privacy Policy
                     </a>
                 </p>
