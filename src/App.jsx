@@ -4,7 +4,7 @@ import MainRouter from './pages/router'
 function App() {
 
   return (
-    <div className="bg-slate-100 min-h-screen">
+    <div className="min-h-screen">
       <BrowserRouter>
         <MainRouter />
       </BrowserRouter>
