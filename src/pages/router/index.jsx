@@ -8,6 +8,10 @@ import ResetPassword from "../auth/ResetPassword"
 import Login from "../auth/login"
 import TermsOfService from "../auth/TermsOfService"
 import PrivacyPolicy from "../auth/PrivacyPolicy"
+import Transactions from "../main/Trasactions"
+import Add from "../main/Add"
+import Categories from "../main/Categories"
+import Settings from "../main/settings"
 
 const MainRouter = () => {
     return (
@@ -21,6 +25,10 @@ const MainRouter = () => {
             <Route path="/email-sent" element={<EmailSent />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/add" element={<Add />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/settings" element={<Settings />} />
         </Routes>
     )
 }
