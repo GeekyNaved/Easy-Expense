@@ -4,7 +4,7 @@ const Setttings = () => {
     return (
         <div>
             <p>
-                Settings
+                Settings 
             </p>
             <BottomNavbar />
         </div>
