@@ -1,14 +1,12 @@
-import BottomNavbar from '../router/BottomNavbar'
+import BottomNavbar from "../router/BottomNavbar";
 
-const Setttings = () => {
-    return (
-        <div>
-            <p>
-                Settings 
-            </p>
-            <BottomNavbar />
-        </div>
-    )
-}
+const Settings = () => {
+  return (
+    <div>
+      <p>Settings</p>
+      <BottomNavbar />
+    </div>
+  );
+};
 
-export default Setttings
+export default Settings;

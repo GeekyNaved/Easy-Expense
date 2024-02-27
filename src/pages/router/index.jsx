@@ -11,8 +11,7 @@ import PrivacyPolicy from "../auth/PrivacyPolicy"
 import Transactions from "../main/Trasactions"
 import Add from "../main/Add"
 import Categories from "../main/Categories"
-import Settings from "../main/settings"
-
+import Settings from "../main/Settings"
 const MainRouter = () => {
     return (
         <Routes>
