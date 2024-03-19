@@ -7,6 +7,10 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+    const handleLogin = () => {
+        localStorage.setItem("token", "xyz");
+        navigate("/home");
+    }
     return (
         <div className="px-4 md:max-w-xl mx-auto">
             <p className="py-20 text-center text-5xl text-gray-900">
@@ -24,11 +28,11 @@ const Login = () => {
             <div className="flex flex-col gap-6 item-center justify-center my-2">
                 <InputField type="email" placeholder="Email" handleToggle={null} />
                 <InputField type={showPassword ? "text" : "password"} placeholder="Password" handleToggle={() => setShowPassword(!showPassword)} />
-                <CustButton className="mt-4 mx-10" title="Login" handleClick={() => navigate("/home")} />
+                <CustButton className="mt-4 mx-10" title="Login" handleClick={handleLogin} />
                 <a onClick={() => navigate("/forgot-password")} className="cursor-pointer self-center text-sm font-bold text-blue-600 hover:underline underline-offset-4">
                     Forgot Password ?
                 </a>
-                <p className="text-center text-gray-500">Don't have an account yet?{" "}
+                <p className="text-center text-gray-500">Don&apos;t have an account yet?{" "}
                     <a onClick={() => navigate('/signup')} className="cursor-pointer text-center text-sm text-blue-600 font-bold underline underline-offset-4">
                         Sign Up</a>
                 </p>

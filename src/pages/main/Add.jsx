@@ -1,15 +1,9 @@
-import React from 'react'
-import BottomNavbar from '../router/BottomNavbar'
-
 const Add = () => {
-    return (
-        <div>
-            <p>
-                Add
-            </p>
-            <BottomNavbar />
-        </div>
-    )
-}
+  return (
+    <div>
+      <p>Add</p>
+    </div>
+  );
+};
 
-export default Add
+export default Add;
