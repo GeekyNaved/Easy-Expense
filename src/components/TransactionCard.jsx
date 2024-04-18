@@ -16,7 +16,7 @@ const TransactionCard = ({type, category, notes, amount, date}) => {
           {type == "income" ? <PiDownload /> : <PiUpload />}
         </CustIconWrapper>
         <div className="flex flex-col gap-1">
-          <p className="text-3xl font-medium">{category}</p>
+          <p className="text-2xl font-medium">{category}</p>
           <p className="text-gray-500">{notes}</p>
         </div>
       </div>
