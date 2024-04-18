@@ -1,50 +1,13 @@
-import {useNavigate} from "react-router-dom";
+import {FaRupeeSign} from "react-icons/fa";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const token = localStorage.getItem("token");
-  console.log("token:Home", token);
-  const logout = () => {
-    localStorage.clear();
-    navigate("/login");
-  };
   return (
-    <div>
-      <button onClick={logout}>Logout</button>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
+    <div className="px-5 py-5 flex justify-center items-center">
+      <div className="flex flex-col items-center gap-2">
+        <p className="text-3xl text-gray-500">Account Balance</p>
+        <div className="flex gap-1 items-center text-2xl">
+          <FaRupeeSign /> <p>68114</p>
+        </div>
       </div>
     </div>
   );

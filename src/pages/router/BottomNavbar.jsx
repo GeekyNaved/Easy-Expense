@@ -54,12 +54,12 @@ const BottomNavbar = () => {
         to="/settings"
         className={({isActive}) =>
           isActive
-            ? "bg-slate-500 flex flex-col items-center px-4 py-5"
-            : "bg-slate-200 flex flex-col items-center px-4 py-5"
+            ? "bg-slate-500 flex flex-col items-center px-4 py-4"
+            : "bg-slate-200 flex flex-col items-center px-4 py-4"
         }
       >
         <FcSettings />
-        <p className="text3xl">Settings</p>
+        <p>Settings</p>
       </NavLink>
     </div>
   );
