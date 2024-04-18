@@ -8,7 +8,7 @@ const Transactions = () => {
         <p className="text-3xl text-gray-500">My Spendings</p>
         <AmountWithRupee className="text-4xl" amount={19100} />
       </div>
-      <div className="md:w-1/2 mt-10">
+      <div className="md:w-1/3 mt-10">
         <CustDonutChart />
       </div>
     </div>
