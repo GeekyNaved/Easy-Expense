@@ -24,7 +24,7 @@ const MainRoutes = () => {
     return (
       <div className="flex flex-row w-screen h-screen overflow-x-hidden">
         {isMobile ? <BottomNavbar /> : <SideNavbar />}
-        <div className="w-screen h-screen bg-blue-50 overflow-hidden">
+        <div className="w-screen h-screen bg-blue-50 overflow-y-auto">
           <Outlet />
         </div>
       </div>

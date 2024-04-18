@@ -8,7 +8,7 @@ import ResetPassword from "../auth/ResetPassword";
 import Login from "../auth/login";
 import TermsOfService from "../auth/TermsOfService";
 import PrivacyPolicy from "../auth/PrivacyPolicy";
-import Transactions from "../main/Trasactions";
+import Transactions from "../main/Transactions";
 import Add from "../main/Add";
 import Categories from "../main/Categories";
 import Settings from "../main/Settings";
