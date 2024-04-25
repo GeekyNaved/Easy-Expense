@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-const Welcome = () => {
+const Welcome: React.JSX.Element = () => {
     const navigate = useNavigate();
     return (
         <div className="bg-blue-700 flex flex-col items-center justify-center min-h-screen">

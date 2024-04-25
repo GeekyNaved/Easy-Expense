@@ -1,7 +1,7 @@
 import CustButton from "../../components/CustButton";
 import { useNavigate } from "react-router-dom";
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy: React.JSX.Element = () => {
     const navigate = useNavigate();
     return (
         <div className="px-4 md:max-w-xl mx-auto">

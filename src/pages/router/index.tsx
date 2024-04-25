@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "../main/home";
 import Welcome from "../auth/welcome";
 import SignUp from "../auth/Signup";
@@ -13,7 +13,7 @@ import Add from "../main/Add";
 import Categories from "../main/Categories";
 import Settings from "../main/Settings";
 import MainRoutes from "./MainRoutes";
-const MainRouter = () => {
+const MainRouter: React.JSX.Element = () => {
   return (
     <Routes>
       <>

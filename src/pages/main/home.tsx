@@ -1,8 +1,8 @@
-import {dummyTransaction} from "../../DummyData/dummyTransaction";
+import { dummyTransaction } from "../../DummyData/dummyTransaction";
 import AccountBalanceHome from "../../components/AccountBalanceHome";
 import TransactionCard from "../../components/TransactionCard";
 
-const Home = () => {
+const Home: React.JSX.Element = () => {
   return (
     <div className="md:px-20 p-5 flex flex-col">
       <AccountBalanceHome />

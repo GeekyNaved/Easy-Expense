@@ -1,9 +1,9 @@
-import {Navigate, Outlet} from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import BottomNavbar from "./BottomNavbar";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import SideNavbar from "./SideNavbar";
 
-const MainRoutes = () => {
+const MainRoutes: React.JSX.Element = () => {
   const [isMobile, setIsMobile] = useState(Boolean);
   // check user's device is mobile or desktop to bottomNavbar on mobile & sideNavbar in desktops
   useEffect(() => {

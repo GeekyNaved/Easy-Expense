@@ -1,7 +1,7 @@
 import CustButton from "../../components/CustButton";
 import { useNavigate } from "react-router-dom";
 import emailRecovery from "../../assets/emailRecovery.png"
-const EmailSent = () => {
+const EmailSent: React.JSX.Element = () => {
     const navigate = useNavigate();
     return (
         <div className="px-4 md:max-w-xl mx-auto">

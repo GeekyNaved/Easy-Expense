@@ -1,10 +1,10 @@
-import {NavLink, useNavigate} from "react-router-dom";
-import {FaHome, FaPlus} from "react-icons/fa";
-import {MdCategory, MdDonutSmall} from "react-icons/md";
-import {IoLogOut} from "react-icons/io5";
-import {IoIosHelpCircle, IoMdSettings} from "react-icons/io";
+import { NavLink, useNavigate } from "react-router-dom";
+import { FaHome, FaPlus } from "react-icons/fa";
+import { MdCategory, MdDonutSmall } from "react-icons/md";
+import { IoLogOut } from "react-icons/io5";
+import { IoIosHelpCircle, IoMdSettings } from "react-icons/io";
 
-const SideNavbar = () => {
+const SideNavbar: React.JSX.Element = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   // console.log("token:Home", token);
@@ -19,7 +19,7 @@ const SideNavbar = () => {
         <h1 className="p-5 text-2xl font-medium">Easy Expense</h1>
         <NavLink
           to="/home"
-          className={({isActive}) =>
+          className={({ isActive }) =>
             isActive
               ? "bg-red-500 flex items-center gap-2 p-5"
               : " flex items-center gap-2 p-5"
@@ -30,7 +30,7 @@ const SideNavbar = () => {
         </NavLink>
         <NavLink
           to="/transactions"
-          className={({isActive}) =>
+          className={({ isActive }) =>
             isActive
               ? "bg-red-500 flex items-center gap-2 p-5"
               : " flex items-center gap-2 p-5"
@@ -41,7 +41,7 @@ const SideNavbar = () => {
         </NavLink>
         <NavLink
           to="/add"
-          className={({isActive}) =>
+          className={({ isActive }) =>
             isActive
               ? "bg-red-500 flex items-center gap-2 p-5"
               : " flex items-center gap-2 p-5"
@@ -52,7 +52,7 @@ const SideNavbar = () => {
         </NavLink>
         <NavLink
           to="/categories"
-          className={({isActive}) =>
+          className={({ isActive }) =>
             isActive
               ? "bg-red-500 flex items-center gap-2 p-5"
               : " flex items-center gap-2 p-5"
@@ -63,7 +63,7 @@ const SideNavbar = () => {
         </NavLink>
         <NavLink
           to="/settings"
-          className={({isActive}) =>
+          className={({ isActive }) =>
             isActive
               ? "bg-red-500 flex items-center gap-2 p-5"
               : " flex items-center gap-2 p-5"

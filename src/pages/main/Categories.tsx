@@ -1,4 +1,4 @@
-const Categories = () => {
+const Categories: React.JSX.Element = () => {
   return (
     <>
       <div className="my-20">

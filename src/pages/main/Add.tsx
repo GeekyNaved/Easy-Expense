@@ -1,8 +1,8 @@
-import {useState} from "react";
+import { useState } from "react";
 import InputField from "../../components/InputField";
 import CustButton from "../../components/CustButton";
 
-const Add = () => {
+const Add: React.JSX.Element = () => {
   const [type, setType] = useState("Expense");
 
   return (

@@ -4,7 +4,7 @@ import CustButton from "../../components/CustButton";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp: React.JSX.Element = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     return (

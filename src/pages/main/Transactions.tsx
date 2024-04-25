@@ -1,9 +1,9 @@
-import {dummyTransaction} from "../../DummyData/dummyTransaction";
+import { dummyTransaction } from "../../DummyData/dummyTransaction";
 import AmountWithRupee from "../../components/AmountWithRupee";
-import {CustDonutChart} from "../../components/CustDonutChart";
+import { CustDonutChart } from "../../components/CustDonutChart";
 import TransactionCard from "../../components/TransactionCard";
 
-const Transactions = () => {
+const Transactions: React.JSX.Element = () => {
   return (
     <div className="md:px-20 p-5 flex flex-col">
       <div className="flex flex-col items-center gap-2">

@@ -2,7 +2,7 @@ import InputField from "../../components/InputField"
 import CustButton from "../../components/CustButton";
 import { useNavigate } from "react-router-dom";
 
-const ResetPassword = () => {
+const ResetPassword: React.JSX.Element = () => {
     const navigate = useNavigate();
     return (
         <div className="px-4 md:max-w-xl mx-auto">
