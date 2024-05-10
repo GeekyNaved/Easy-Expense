@@ -1,42 +1,52 @@
+import { dummyCategoryExpense, dummyCategoryIncome } from "@/DummyData/dummyTransaction";
+import CategoriesCard from "@/components/CategoriesCard";
+import { useState } from "react";
+
 const Categories: React.JSX.Element = () => {
+  const [type, setType] = useState<string>("Expense");
+  const [categoriesData, setCategoriesData] = useState(dummyCategoryExpense);
+
   return (
-    <>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
+    <div className="md:px-20 p-5 flex flex-col">
+      <nav className="bg-transparent shadow-lg grid grid-cols-2">
+        <button
+          className={
+            type == "Expense"
+              ? "rounded bg-red-500 text-white p-5"
+              : "rounded bg-red-100 text-black p-5"
+          }
+          onClick={() => {
+            setType("Expense");
+            setCategoriesData(dummyCategoryExpense);
+          }}
+        >
+          Expense
+        </button>
+        <button
+          className={
+            type == "Income"
+              ? "rounded bg-green-500 text-white p-5"
+              : "rounded bg-green-100 text-black p-5"
+          }
+          onClick={() => {
+            setType("Income");
+            setCategoriesData(dummyCategoryIncome);
+          }}
+        >
+          Income
+        </button>
+      </nav>
+      <div className="mt-5">
+        {categoriesData.map((item, key) => {
+          return (
+            <CategoriesCard
+              key={key}
+              name={item.label}
+            />
+          );
+        })}
       </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-      <div className="my-20">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-        reiciendis labore iste maxime reprehenderit nisi, commodi veritatis
-        minus placeat facilis.
-      </div>
-    </>
+    </div>
   );
 };
 
