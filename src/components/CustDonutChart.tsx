@@ -24,7 +24,7 @@ const data = {
     },
   ],
 };
-export const CustDonutChart = () => {
+export const CustDonutChart: React.FC = () => {
   return (
     <Doughnut
       data={data}

@@ -1,5 +1,11 @@
 // amount with inline rupee sign
-const AmountWithRupee = ({amount, className}) => {
+
+interface AmountWithRupeeProps {
+  amount: number;
+  className: string;
+}
+
+const AmountWithRupee: React.FC<AmountWithRupeeProps> = ({ amount, className }) => {
   return (
     <div className={`font-medium ${className}`}>
       <span>&#x20B9;</span>

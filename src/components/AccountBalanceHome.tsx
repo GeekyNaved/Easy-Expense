@@ -2,7 +2,7 @@
 import AmountWithRupee from "./AmountWithRupee";
 import MoneyCard from "./MoneyCard";
 
-const AccountBalanceHome = () => {
+const AccountBalanceHome: React.FC = () => {
   return (
     <div className="flex flex-col items-center gap-2">
       <p className="text-3xl text-gray-500">Account Balance</p>

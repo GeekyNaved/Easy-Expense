@@ -1,8 +1,14 @@
 import AmountWithRupee from "./AmountWithRupee";
 import CustIconWrapper from "./CustIconWrapper";
-import {PiDownload, PiUpload} from "react-icons/pi";
-
-const TransactionCard = ({type, category, notes, amount, date}) => {
+import { PiDownload, PiUpload } from "react-icons/pi";
+interface TransactionCardProps {
+  type: string;
+  category: string;
+  notes: string;
+  amount: number;
+  date: string;
+}
+const TransactionCard: React.FC<TransactionCardProps> = ({ type, category, notes, amount, date }) => {
   return (
     <div className="flex justify-between items-center rounded-xl bg-slate-50 shadow-lg px-5 py-5 mb-5">
       <div className="flex gap-5 items-center">

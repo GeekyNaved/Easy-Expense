@@ -1,9 +1,14 @@
 // Income and Expense Card: used in home screen
-import {PiDownload, PiUpload} from "react-icons/pi";
+import { PiDownload, PiUpload } from "react-icons/pi";
 import CustIconWrapper from "./CustIconWrapper";
 import AmountWithRupee from "./AmountWithRupee";
 
-const MoneyCard = ({title, amount}) => {
+interface MoneyCardProps {
+  title: string;
+  amount: number;
+}
+
+const MoneyCard: React.FC<MoneyCardProps> = ({ title, amount }) => {
   return (
     <div
       className={

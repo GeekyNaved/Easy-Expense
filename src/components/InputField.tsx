@@ -1,6 +1,13 @@
 import { IoMdEye, IoMdEyeOff } from "react-icons/io"
 
-const InputField = ({ type, placeholder, handleToggle }) => {
+interface InputFieldProps {
+    type: string;
+    placeholder: string;
+    handleToggle: () => void;
+}
+
+
+const InputField: React.FC<InputFieldProps> = ({ type, placeholder, handleToggle }) => {
     return (
         <div className="relative flex items-center">
             <input className="rounded-md border-2 border-gray-200 px-4 py-4 min-w-full" type={type} placeholder={placeholder} />
