@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputField from "../../components/InputField";
 import CustButton from "../../components/CustButton";
+import { CustomSelect } from "@/components/CustomSelect";
 
 const Add: React.JSX.Element = () => {
   const [type, setType] = useState("Expense");
@@ -34,6 +35,7 @@ const Add: React.JSX.Element = () => {
         <InputField type="text" placeholder="Category" handleToggle={null} />
         <InputField type="text" placeholder="Notes" handleToggle={null} />
         <InputField type="text" placeholder="Date" handleToggle={null} />
+        <CustomSelect />
       </div>
       <CustButton title={`Add ${type}`} className="mt-10 px-10 self-center " />
     </div>
