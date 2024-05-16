@@ -2,6 +2,8 @@ import { MdEdit } from "react-icons/md";
 import AmountWithRupee from "./AmountWithRupee";
 import CustIconWrapper from "./CustIconWrapper";
 import { PiDownload, PiUpload } from "react-icons/pi";
+import { useState } from "react";
+import EditTransactionDialog from "./EditTransactionDialog";
 interface TransactionCardProps {
   type: string;
   category: string;
@@ -10,6 +12,15 @@ interface TransactionCardProps {
   date: string;
 }
 const TransactionCard: React.FC<TransactionCardProps> = ({ type, category, notes, amount, date }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    // console.log('name', name)
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div className="flex justify-between items-center rounded-xl bg-slate-50 shadow-lg px-2 py-4 md:p-5 mb-5">
       <div className="flex gap-2 md:gap-5 items-center">
@@ -35,12 +46,13 @@ const TransactionCard: React.FC<TransactionCardProps> = ({ type, category, notes
           />
           <p className="font-medium text-xs md:text-sm">Date: {date}</p>
         </div>
-        <button onClick={() => alert('hi')}>
-          <CustIconWrapper className="p-1 md:p-2 bg-slate-100 md:text-xl">
-            <MdEdit />
-          </CustIconWrapper>
-        </button>
-
+        <EditTransactionDialog isOpen={open} onClose={handleClose}>
+          <button onClick={handleClickOpen}>
+            <CustIconWrapper className="p-1 md:p-2 bg-slate-100 md:text-xl">
+              <MdEdit />
+            </CustIconWrapper>
+          </button>
+        </EditTransactionDialog>
       </div>
     </div>
   );
