@@ -20,15 +20,15 @@ const MoneyCard: React.FC<MoneyCardProps> = ({ title, amount }) => {
       <CustIconWrapper
         className={
           title == "Income"
-            ? "p-2 bg-white text-green-500 text-2xl"
-            : "p-2 bg-white text-red-500 text-2xl"
+            ? "p-2 bg-white text-green-500 text-xl md:text-2xl"
+            : "p-2 bg-white text-red-500 text-xl md:text-2xl"
         }
       >
         {title == "Income" ? <PiDownload /> : <PiUpload />}
       </CustIconWrapper>
       <div>
-        <p className="text-xl">{title}</p>
-        <AmountWithRupee amount={amount} className="text-2xl" />
+        <p className="md:text-xl">{title}</p>
+        <AmountWithRupee amount={amount} className="text-xl md:text-2xl" />
       </div>
     </div>
   );

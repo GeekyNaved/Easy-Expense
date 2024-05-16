@@ -1,3 +1,4 @@
+import { MdEdit } from "react-icons/md";
 import AmountWithRupee from "./AmountWithRupee";
 import CustIconWrapper from "./CustIconWrapper";
 import { PiDownload, PiUpload } from "react-icons/pi";
@@ -10,28 +11,36 @@ interface TransactionCardProps {
 }
 const TransactionCard: React.FC<TransactionCardProps> = ({ type, category, notes, amount, date }) => {
   return (
-    <div className="flex justify-between items-center rounded-xl bg-slate-50 shadow-lg px-5 py-5 mb-5">
-      <div className="flex gap-5 items-center">
+    <div className="flex justify-between items-center rounded-xl bg-slate-50 shadow-lg px-2 py-4 md:p-5 mb-5">
+      <div className="flex gap-2 md:gap-5 items-center">
         <CustIconWrapper
           className={
             type == "income"
-              ? "p-2 bg-green-100 text-green-500 text-2xl"
-              : "p-2 bg-red-100 text-red-500 text-2xl"
+              ? "p-2 bg-green-100 text-green-500 md:text-xl"
+              : "p-2 bg-red-100 text-red-500 md:text-xl"
           }
         >
           {type == "income" ? <PiDownload /> : <PiUpload />}
         </CustIconWrapper>
-        <div className="flex flex-col gap-1">
-          <p className="text-2xl font-medium">{category}</p>
-          <p className="text-gray-500">{notes}</p>
+        <div className="flex flex-col md:gap-1">
+          <p className="md:text-xl font-medium">{category}</p>
+          <p className="text-xs md:text-sm text-gray-500">{notes}</p>
         </div>
       </div>
-      <div className="text-center">
-        <AmountWithRupee
-          amount={amount}
-          className={type == "income" ? "text-green-500 text-2xl" : "text-red-500 text-2xl"}
-        />
-        <p className="font-medium">Date: {date}</p>
+      <div className="flex gap-2 md:gap-5 items-center">
+        <div className="text-center">
+          <AmountWithRupee
+            amount={amount}
+            className={type == "income" ? "text-green-500 md:text-xl" : "text-red-500 md:text-xl"}
+          />
+          <p className="font-medium text-xs md:text-sm">Date: {date}</p>
+        </div>
+        <button onClick={() => alert('hi')}>
+          <CustIconWrapper className="p-1 md:p-2 bg-slate-100 md:text-xl">
+            <MdEdit />
+          </CustIconWrapper>
+        </button>
+
       </div>
     </div>
   );

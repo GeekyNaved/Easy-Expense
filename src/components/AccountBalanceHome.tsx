@@ -7,7 +7,7 @@ const AccountBalanceHome: React.FC = () => {
     <div className="flex flex-col items-center gap-2">
       <p className="text-3xl text-gray-500">Account Balance</p>
       <AmountWithRupee className="text-4xl" amount={20900} />
-      <div className="flex gap-4 py-5">
+      <div className="flex gap-2 md:gap-4 py-5">
         <MoneyCard title="Income" amount="40000" />
         <MoneyCard title="Expenses" amount="19100" />
       </div>
