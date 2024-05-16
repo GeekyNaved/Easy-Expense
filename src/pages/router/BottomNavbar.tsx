@@ -5,60 +5,60 @@ import { FcSettings } from "react-icons/fc";
 
 const BottomNavbar: React.JSX.Element = () => {
   return (
-    <div className="fixed bottom-0 grid grid-cols-5 min-w-full">
+    <div className="bg-blue-300 fixed bottom-0 grid grid-cols-5 min-w-full">
       <NavLink
         to="/home"
         className={({ isActive }) =>
           isActive
-            ? "bg-slate-500 flex flex-col items-center px-4 py-5"
-            : "bg-slate-200 flex flex-col items-center px-4 py-5"
+            ? "bg-red-500 flex flex-col items-center px-4 py-5"
+            : "flex flex-col items-center px-4 py-5"
         }
       >
-        <FaHome className="text3xl" />
-        <p className="text3xl">Home</p>
+        <FaHome className="text-2xl" />
+        <p>Home</p>
       </NavLink>
       <NavLink
         to="/transactions"
         className={({ isActive }) =>
           isActive
-            ? "bg-slate-500 flex flex-col items-center px-4 py-5"
-            : "bg-slate-200 flex flex-col items-center px-4 py-5"
+            ? "bg-red-500 flex flex-col items-center px-4 py-5"
+            : "flex flex-col items-center px-4 py-5"
         }
       >
-        <MdDonutSmall />
-        <p className="text3xl">Transactions</p>
+        <MdDonutSmall className="text-2xl" />
+        <p>Transactions</p>
       </NavLink>
       <NavLink
         to="/add"
         className={({ isActive }) =>
           isActive
-            ? "bg-slate-500 flex flex-col items-center px-4 py-5"
-            : "bg-slate-200 flex flex-col items-center px-4 py-5"
+            ? "bg-red-500 flex flex-col items-center px-4 py-5"
+            : "flex flex-col items-center px-4 py-5"
         }
       >
-        <FaPlus />
-        <p className="text3xl">Add</p>
+        <FaPlus className="text-2xl" />
+        <p>Add</p>
       </NavLink>
       <NavLink
         to="/categories"
         className={({ isActive }) =>
           isActive
-            ? "bg-slate-500 flex flex-col items-center px-4 py-5"
-            : "bg-slate-200 flex flex-col items-center px-4 py-5"
+            ? "bg-red-500 flex flex-col items-center px-4 py-5"
+            : "flex flex-col items-center px-4 py-5"
         }
       >
-        <MdCategory />
-        <p className="text3xl">Categories</p>
+        <MdCategory className="text-2xl" />
+        <p>Categories</p>
       </NavLink>
       <NavLink
         to="/settings"
         className={({ isActive }) =>
           isActive
-            ? "bg-slate-500 flex flex-col items-center px-4 py-4"
-            : "bg-slate-200 flex flex-col items-center px-4 py-4"
+            ? "bg-red-500 flex flex-col items-center px-4 py-4"
+            : "flex flex-col items-center px-4 py-4"
         }
       >
-        <FcSettings />
+        <FcSettings className="text-2xl" />
         <p>Settings</p>
       </NavLink>
     </div>
