@@ -2,7 +2,9 @@ import { useState } from "react";
 import InputField from "../../components/InputField";
 import CustButton from "../../components/CustButton";
 import CustDropDown from "../../components/CustDropDown";
-
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 const Add: React.JSX.Element = () => {
   const [type, setType] = useState("Expense");
@@ -35,7 +37,14 @@ const Add: React.JSX.Element = () => {
         <InputField type="text" placeholder="Amount" handleToggle={null} />
         <CustDropDown />
         <InputField type="text" placeholder="Notes" handleToggle={null} />
-        <InputField type="text" placeholder="Date" handleToggle={null} />
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DatePicker
+            label="Select Date"
+            sx={{
+              background: 'white',
+            }}
+          />
+        </LocalizationProvider>
       </div>
       <CustButton title={`Add ${type}`} className="mt-10 px-10 self-center " />
     </div>
