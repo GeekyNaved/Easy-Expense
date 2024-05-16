@@ -1,6 +1,6 @@
-import { dummyCategoryExpense, dummyCategoryIncome } from "@/DummyData/dummyTransaction";
-import CategoriesCard from "@/components/CategoriesCard";
 import { useState } from "react";
+import { dummyCategoryExpense, dummyCategoryIncome } from "../../DummyData/dummyTransaction";
+import CategoriesCard from "../../components/CategoriesCard";
 
 const Categories: React.JSX.Element = () => {
   const [type, setType] = useState<string>("Expense");
