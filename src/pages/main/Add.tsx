@@ -1,6 +1,8 @@
 import { useState } from "react";
 import InputField from "../../components/InputField";
 import CustButton from "../../components/CustButton";
+import CustDropDown from "../../components/CustDropDown";
+
 
 const Add: React.JSX.Element = () => {
   const [type, setType] = useState("Expense");
@@ -31,7 +33,7 @@ const Add: React.JSX.Element = () => {
       </nav>
       <div className="grid md:grid-cols-2 gap-4 mt-5">
         <InputField type="text" placeholder="Amount" handleToggle={null} />
-        <InputField type="text" placeholder="Category" handleToggle={null} />
+        <CustDropDown />
         <InputField type="text" placeholder="Notes" handleToggle={null} />
         <InputField type="text" placeholder="Date" handleToggle={null} />
       </div>
