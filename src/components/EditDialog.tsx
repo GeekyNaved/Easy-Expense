@@ -38,7 +38,7 @@ const EditDialog: React.FC<dialogProps> = ({ categoryName, children, isOpen, onC
                     },
                 }}
             >
-                <DialogTitle>Edit Categories</DialogTitle>
+                <DialogTitle sx={{ fontWeight: 'bold' }}>Edit Categories</DialogTitle>
                 <DialogContent>
                     <TextField
                         autoFocus
@@ -57,7 +57,7 @@ const EditDialog: React.FC<dialogProps> = ({ categoryName, children, isOpen, onC
                     />
                 </DialogContent>
                 <DialogActions>
-                    <button className='text-red-500 px-4 py-2' onClick={onClose}>Cancel</button>
+                    <button className='font-medium text-red-500 px-4 py-2' onClick={onClose}>Cancel</button>
                     <button className="font-medium px-4 py-2" type="submit">Save</button>
                 </DialogActions>
             </Dialog>
